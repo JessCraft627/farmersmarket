@@ -1,0 +1,13 @@
+Hello Order's Show <br>
+
+Here is Your Order:<br>
+<% counter = 1 %>
+<% @order.products.each do |product| %>
+  Item <%= counter %>: <br>
+  <ul>
+    <li> <%= product.name %> </li>
+    <li> $<%= product.price %> </li>
+    <li> <%= product.weight %>lbs </li>
+    <% counter += 1%>
+  </ul>
+<% end %>
