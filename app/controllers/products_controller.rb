@@ -9,7 +9,8 @@ class ProductsController < ApplicationController
   end
 
 
-
+  def main
+  end
 
 
 

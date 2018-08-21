@@ -1,3 +1,18 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.header {
+  background-image: url('r.jpg');
+
+  object-fit: contain;
+  background-repeat:no-repeat;
+  background-position: center;
+  height:500px;
+  background-color: grey;
+}
