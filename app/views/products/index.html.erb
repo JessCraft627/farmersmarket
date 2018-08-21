@@ -1,8 +1,43 @@
 Hello Product's Index
+Displays Cart:
+<h1>Menu</h1>
+<h3><%= flash[:notice] %></h3>
+<h4>Your Cart: </h4>
+<ol>
+  <% @cart_products.each do |cart_product| %>
+    <li><%= cart_product.name %></li>
+  <% end %>
+</ol>
+
+<hr>
+
+
+Display Items to Add:
+<ul>
+  <% @products.map do |product| %>
+      <li>
+        <%= link_to product.name, product %>
+        $<%= product.price %>
+        <%=
+          button_to "Add To Cart",
+          add_to_cart_path,
+          method: :patch,
+          params: { product_id: product.id, name: product.name }
+        %>
+      </li>
+  <% end %>
+</ul>
+
+
+
+
+
+
+
 <% @products.each do |product|%>
 <ul>
   <li>Name: <%= product.name %></li>
   <li>Price: $<%= product.price %></li>
-  <li>Weight: <%= product.weight %> lbs.</li>
+  <li>Type: <%= product.food_type %></li>
 </ul>
 <% end %>

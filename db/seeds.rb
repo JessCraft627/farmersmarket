@@ -7,12 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-product_names = ["apple", "banana", "turkey"]
-prices = [4, 10, 14, 21]
-weights = [1, 2, 10]
+fruits = ["cherries", "grapes", "bananas", "watermelon", "granny smith apples", "bartlett pear"]
+vegetables = ["carrots", "broccoli", "garlic", "pepper", "potato", "tomato"]
+meats = ["chicken", "duck", "turkey", "beef", "lamb", "pork"]
+dairies = ["milk", "egg", "cheese", "butter", "yogurt", "sour cream"]
 
-5.times do
-  Product.create(name: product_names.sample, price: prices.sample, weight: weights.sample)
+fruit_prices = [8, 5, 2, 5, 6, 1]
+vegetable_prices = [3, 4, 4, 4, 2, 4]
+meat_prices = [3, 15, 6, 30, 29, 11]
+dairy_prices = [5, 4, 8, 5, 5, 5]
+
+counter = 0
+6.times do
+  Product.create(name: fruits[counter], price: fruit_prices[counter], food_type: "fruit")
+  Product.create(name: vegetables[counter], price: vegetable_prices[counter], food_type: "vegetable")
+  Product.create(name: meats[counter], price: meat_prices[counter], food_type: "meat")
+  Product.create(name: dairies[counter], price: dairy_prices[counter], food_type: "dairy")
+  counter += 1
 end
 
 shopper_names = ["Jess", "Yung"]

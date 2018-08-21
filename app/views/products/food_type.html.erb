@@ -1,0 +1,18 @@
+Hello Food Type Page
+
+<h3><%= flash[:notice] %></h3>
+Display Items to Add:
+<ul>
+  <% @products.map do |product| %>
+      <li>
+        <%= link_to product.name, product %>
+        $<%= product.price %>
+        <%=
+          button_to "Add To Cart",
+          add_to_cart_path,
+          method: :patch,
+          params: { product_id: product.id, name: product.name }
+        %>
+      </li>
+  <% end %>
+</ul>
