@@ -12,6 +12,7 @@ class ShoppersController < ApplicationController
   def create
     @shopper = Shopper.create(shopper_params)
     if @shopper.valid?
+      flash[:notice] = "Account successfully created"
       redirect_to shopper_path(@shopper)
     else
         render :new
@@ -36,7 +37,8 @@ class ShoppersController < ApplicationController
 
   private
   def shopper_params
-    params.require(:shopper).permit(:name, :address)
+    params.require(:shopper).permit(:name, :address, :email, :city, :state, :zip, :card_number, :expiration_month, :expiration_year,
+    :cvv, :password, :password_confirmation)
   end
 
 end

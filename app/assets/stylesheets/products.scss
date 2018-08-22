@@ -1,18 +1,64 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  margin: 0;
+}
+.nav_bar {
+    padding: 0px
+}
 
-h1 {
+.title {
     color: white;
+    padding-top: 300px;
+    font-size: 56px;
     text-align: center;
+}
+
+h2  {
+  color: white;
+  text-align: center;
+}
+.main_photo {
+  width: 300px;
+  margin-left: 15px;
 }
 
 .header {
   background-image: url('r.jpg');
-
-  object-fit: contain;
+  height: 750px;
+  margin: 0 auto;
+  background-size: cover;
   background-repeat:no-repeat;
   background-position: center;
-  height:500px;
-  background-color: grey;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+ .directory {
+     padding: 10px;
+     margin-bottom:  100px;
+ }
+.btn {
+  padding-top: 20px ;
+  width: 30px;
+}
+.body {
+  margin: 0 auto;
+}
+.account_button {
+    float: right;
+    padding-right: 15px;
+}
+
+.home_button {
+    padding-left: 55px;
+}
+
+.cart_button {
+    float: right;
+    padding-right: 35px;
 }
