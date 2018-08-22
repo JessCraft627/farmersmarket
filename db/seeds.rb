@@ -4,9 +4,6 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
 fruits = ["cherries", "grapes", "bananas", "watermelon", "granny smith apples", "bartlett pear"]
 vegetables = ["carrots", "broccoli", "garlic", "pepper", "potato", "tomato"]
 meats = ["chicken", "duck", "turkey", "beef", "lamb", "pork"]
@@ -30,19 +27,19 @@ shopper_names = ["Jess", "Yung"]
 shopper_addreesses = ["180 Broadway", "603 5th Avenue"]
 
 3.times do
-  Shopper.create(name: shopper_names.sample, address: shopper_addreesses.sample)
+ Shopper.create(name: shopper_names.sample, address: shopper_addreesses.sample)
 end
 
 shopper_ids = [1, 2]
 
 5.times do
-  Order.create(shopper_id: shopper_ids.sample)
+ Order.create(shopper_id: shopper_ids.sample)
 end
 
 order_ids = [1, 2, 3, 4, 5]
 product_ids = [1, 2, 3, 4, 5]
 5.times do
-  ProductOrder.create(order_id: order_ids.sample, product_id: product_ids.sample)
+ ProductOrder.create(order_id: order_ids.sample, product_id: product_ids.sample)
 end
 
 

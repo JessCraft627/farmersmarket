@@ -1,3 +1,42 @@
 // Place all the styles related to the Orders controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.success {
+  width: 1027px;
+  height: 572px;
+  border-radius: 10px;
+  background-color: #93bfae;
+  border: solid 1px #93bfae;
+  margin: 150px auto 0;
+}
+
+.thank_you_title {
+  padding-left: 120px;
+  margin: 0 auto;
+  padding-top: 80px;
+  width: 70%;
+}
+
+.thanks {
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+.order_received {
+   font-size: 22px;
+   font-weight: thin;
+}
+
+.home_address {
+  font-weight: bold;
+   font-size: 16px;
+
+}

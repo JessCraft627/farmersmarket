@@ -9,7 +9,22 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <header class="nav_bar">
+    <%= link_to root_path do %>
+         <%= image_tag  "fork.png", class: "btn home_button" %>
+    <% end %>
+
+    <%= link_to root_path do %>
+         <%= image_tag  "shopping-cart.png", class: "btn cart_button" %>
+    <% end %>
+
+    <%= link_to root_path do %>
+          <%= image_tag  "user-account-box.png", class: "btn account_button" %>
+    <% end %>
+
+  </header>
+
+  <body class="body">
     <%= yield %>
   </body>
 </html>

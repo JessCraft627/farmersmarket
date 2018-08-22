@@ -1,0 +1,28 @@
+
+
+
+
+<div class= "header">
+<h1 class="title">Farm to table</h1>
+<h2> — Your Neighborhood Grocer — </h2>
+</div>
+
+<div class="directory">
+
+<%= link_to products_path(@product) do %>
+     <%= image_tag  "dairy.jpg", class: "main_photo" %>
+<% end %>
+
+<%= link_to products_path(@product) do %>
+     <%= image_tag  "meats.jpg", class: "main_photo" %>
+<% end %>
+
+<%= link_to products_path(@product) do %>
+     <%= image_tag  "fruits.jpg", class: "main_photo" %>
+<% end %>
+
+  <%= link_to products_path(@product) do %>
+       <%= image_tag  "vegetables.jpg", class: "main_photo" %>
+  <% end %>
+
+</div>
