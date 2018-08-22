@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
 
   patch '/cart', to: 'cart#update', as: 'add_to_cart'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/cart', to: 'cart#show', as: 'show_cart'
+  post '/cart', to: 'cart#clear_cart', as: 'clear_cart'
 
   get '/products/food_type/:food_type', to: 'products#food_type', as: 'food_type'
+
 end

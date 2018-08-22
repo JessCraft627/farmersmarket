@@ -1,0 +1,13 @@
+Hello Cart's Show
+
+<h1>Your Cart:</h1>
+<h3><%= flash[:notice] %></h3>
+<ol>
+  <% @cart_products.each do |cart_product| %>
+    <li>Name: <%= cart_product.name %> Price: $<%= cart_product.price %> Quantity: <%= @quantities.count(cart_product.id.to_s) %></li>
+  <% end %>
+</ol>
+
+<h2>Your Total Cost: $<%= @total_costs %></h2>
+
+<%= button_to "Clear Cart", clear_cart_path %>

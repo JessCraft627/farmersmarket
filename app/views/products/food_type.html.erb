@@ -7,12 +7,21 @@ Display Items to Add:
       <li>
         <%= link_to product.name, product %>
         $<%= product.price %>
-        <%=
-          button_to "Add To Cart",
-          add_to_cart_path,
-          method: :patch,
-          params: { product_id: product.id, name: product.name }
-        %>
+
+        <%= form_tag add_to_cart_path, method: "cart#update" do %>
+          <%= number_field_tag :quantity %>
+          <%=
+            button_to "Add To Cart",
+            add_to_cart_path,
+            method: :patch,
+            params: { product_id: product.id, name: product.name }
+          %>
+        <% end %>
+
+
       </li>
   <% end %>
 </ul>
+
+
+<%= button_to "Cart" , show_cart_path, method: :get %>
