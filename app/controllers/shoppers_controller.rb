@@ -33,8 +33,6 @@ class ShoppersController < ApplicationController
         end
   end
 
-
-
   private
   def shopper_params
     params.require(:shopper).permit(:name, :address, :email, :city, :state, :zip, :card_number, :expiration_month, :expiration_year,

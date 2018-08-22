@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :orders, only: [:show, :new, :create, :edit, :update]
   resources :shoppers, only: [:show, :new, :create, :update, :edit]
+  get '/cart/main', to: 'cart#main'
   root to: "products#main"
   get '/cart/confirmation', to: 'cart#confirmation'
   patch '/cart', to: 'cart#update', as: 'add_to_cart'
