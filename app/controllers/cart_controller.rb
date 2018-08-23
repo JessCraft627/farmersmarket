@@ -25,6 +25,8 @@ class CartController < ApplicationController
     redirect_to show_cart_path
   end
 
-
+  def confirmation
+    session[:cart] = []
+  end
 
 end
