@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
    find_products
   end
 
+
+
   private
 
   def find_product

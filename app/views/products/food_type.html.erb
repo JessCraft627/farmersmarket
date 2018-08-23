@@ -1,11 +1,15 @@
-Hello Food Type Page
+<h3 class= "alert"><%= flash[:notice] %></h3>
+ <%= image_tag  "vegetables.jpg", class: "your_cart" %>
+ <%= image_tag  "meats.jpg", class: "your_cart" %>
+ <%= image_tag  "dairy.jpg", class: "your_cart" %>
+ <%= image_tag  "fruits.jpg", class: "your_cart" %>
 
-<h3><%= flash[:notice] %></h3>
-Display Items to Add:
-<ul>
+<ul class="create_cart">
+
   <% @products.map do |product| %>
       <li>
         <%= link_to product.name, product %>
+
         $<%= product.price %>
 
         <%= form_tag add_to_cart_path, method: "cart#update" do %>
@@ -17,11 +21,13 @@ Display Items to Add:
             params: { product_id: product.id, name: product.name }
           %>
         <% end %>
-
-
       </li>
   <% end %>
 </ul>
 
-
-<%= button_to "Cart" , show_cart_path, method: :get %>
+ <%= image_tag  "dairy/d1.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/dai_natyolk_natwhtlg_z.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/dai_pid_2002509_z.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/dai_orgval_sourcrm_z.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/dai_pid_2003188_z.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/dai_pid_2003301_z.jpg", class: "product_image " %>

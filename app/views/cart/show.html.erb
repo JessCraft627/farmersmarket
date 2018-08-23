@@ -1,13 +1,15 @@
-Hello Cart's Show
 
-<h1>Your Cart:</h1>
+<%= image_tag  "your-cart.png", class: "signup" %>
 <h3><%= flash[:notice] %></h3>
 <ol>
   <% @cart_products.each do |cart_product| %>
-    <li>Name: <%= cart_product.name %> Price: $<%= cart_product.price %> Quantity: <%= @quantities.count(cart_product.id.to_s) %></li>
+    <li><%= cart_product.name %> Price: $<%= cart_product.price %> Quantity: <%= @quantities.count(cart_product.id.to_s) %></li>
   <% end %>
+  <br>
+
 </ol>
 
-<h2>Your Total Cost: $<%= @total_costs %></h2>
-
-<%= button_to "Clear Cart", clear_cart_path %>
+<%= button_to "Continue Shopping", root_path,  method: :get, class: "clear_button" %>
+<%= button_to "Clear Cart", clear_cart_path, class: "clear_button" %>
+<h2 class="total_cost">Total: $<%= @total_costs %></h2>
+<%= button_to "Checkout", new_shopper_path, method: :get, class: "checkout_button" %>

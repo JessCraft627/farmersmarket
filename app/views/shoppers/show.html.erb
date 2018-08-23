@@ -1,12 +1,36 @@
-Hello Shopper's Show!
-<ul>
+  <%= image_tag  "checkout@2x.png", class: "checkout_header" %>
+<ul class="checkout_form">
+  <p>Account Information</p>
   <li>Name: <%= @shopper.name %></li>
-  <li>Address: <%= @shopper.address %></li>
-  <li>Address: <%= @shopper.city %></li>
-  <li>Address: <%= @shopper.email %></li>
-  <li>Address: <%= @shopper.state %></li>
-  <li>Address: <%= @shopper.zip %></li>
-  <li>Address: <%= @shopper.expiration_month %></li>
-  <li>Address: <%= @shopper.expiration_year %></li>
-  <li>Address: <%= @shopper.cvv %></li>
+  <li>Email: <%= @shopper.email %></li>
+
+    <p>Address</p>
+  <li>Billing Address: <%= @shopper.address %></li>
+  <li>City: <%= @shopper.city %></li>
+  <li>State: <%= @shopper.state %></li>
+  <li>Zip: <%= @shopper.zip %></li>
+
+  <p>Billing</p>
+  <li>Card Expiration Month: <%= @shopper.expiration_month %></li>
+  <li>Card Expiration Year: <%= @shopper.expiration_year %></li>
+  <li>Card cvv: <%= @shopper.cvv %></li>
 </ul>
+
+<%= button_to "Edit Account Info", edit_shopper_path(@shopper), method: :get, class: "edit_account_button" %>
+
+
+
+<h1>Your Cart:</h1>
+<h3><%= flash[:notice] %></h3>
+<ol>
+  <% @cart_products.each do |cart_product| %>
+    <li><%= cart_product.name %> Price: $<%= cart_product.price %> Quantity: <%= @quantities.count(cart_product.id.to_s) %></li>
+  <% end %>
+  <br>
+
+</ol>
+<h2 class="total_cost">Your Total Cost: $<%= @total_costs %></h2>
+
+
+
+<%= button_to "Confirm Purchase", cart_confirmation_path, method: :get, class: "confirm_button" %>

@@ -2,19 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
+.checkout_header {
+  width: 250px;
+  margin: 0 auto;
+  }
+  
 .create_btn {
   width: 400px;
   height: 74px;
   font-family: Montserrat;
   font-size: 16px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   background-color: #93bfae;
-  text-align: center;
   color: #ffffff;
 }
 
