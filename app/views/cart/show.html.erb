@@ -12,4 +12,4 @@
 <%= button_to "Continue Shopping", root_path,  method: :get, class: "clear_button" %>
 <%= button_to "Clear Cart", clear_cart_path, class: "clear_button" %>
 <h2 class="total_cost">Total: $<%= @total_costs %></h2>
-<%= button_to "Checkout", new_shopper_path, method: :get, class: "checkout_button" %>
+<%= button_to "Checkout", login_path, method: :get, class: "checkout_button" %>
