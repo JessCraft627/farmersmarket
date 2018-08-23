@@ -25,7 +25,8 @@ class ApplicationController < ActionController::Base
   end
 
   def get_products_from_cart
-    @cart_products = Product.find(cart)
+    # @cart_products = Product.find(cart)
+    @cart_products = Product.find(session[:cart])
     @quantities = session[:cart]
     #session[:cart] displays arrays of product_id of products in cart
   end

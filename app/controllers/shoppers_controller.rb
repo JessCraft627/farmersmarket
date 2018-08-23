@@ -1,6 +1,7 @@
 class ShoppersController < ApplicationController
   # skip_before_action :authorized, only: [:new, :create, :show]
   before_action :find_shopper, only: [:show, :profile]
+  before_action :get_products_from_cart, only: [:show, :profile]
 
   def show
     render :show
