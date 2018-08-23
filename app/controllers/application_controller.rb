@@ -1,4 +1,21 @@
 class ApplicationController < ActionController::Base
+  helper_method :current_shopper
+  helper_method :logged_in?
+  # before_action :authorized
+
+  def current_shopper
+    @user = Shopper.find_by({ id: session[:shopper_id] })
+  end
+
+  def logged_in?
+    !!current_shopper()
+  end
+
+  # def authorized
+    # redirect_to login_path unless logged_in?
+    # redirect_to public_path unless logged_in?
+  # end
+
   def cart
     session[:cart] ||= []
   end

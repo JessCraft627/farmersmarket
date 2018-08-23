@@ -1,0 +1,15 @@
+
+<h1>Login</h1>
+
+<h3><%= flash[:notice] %></h3>
+
+<%= form_tag login_path, method: :post do %>
+  <%= label_tag "Shopper Name" %>
+  <%= text_field_tag :name %>
+  <%= label_tag "Password" %>
+  <%= text_field_tag :password %>
+  <%= submit_tag "Login" %>
+<% end %>
+
+<p> Don’t have an account?
+<%= link_to("Sign Up", new_shopper_path) %> </p>

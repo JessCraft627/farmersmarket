@@ -1,9 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 fruits = ["cherries", "grapes", "bananas", "watermelon", "granny smith apples", "bartlett pear"]
 vegetables = ["carrots", "broccoli", "garlic", "pepper", "potato", "tomato"]
 meats = ["chicken", "duck", "turkey", "beef", "lamb", "pork"]
@@ -25,13 +19,23 @@ end
 
 shopper_names = ["Jess", "Yung"]
 shopper_addreesses = ["180 Broadway", "603 5th Avenue"]
+email_addresses = shopper_names.sample + "" + "@gmail.com"
+city = "New York"
+state = "NY"
+zip = 10011
+card_number = 4858935132817042
+month = "September"
+year = "2020"
+cvv = 694
+password_digest = "dnf3kjb4rgfehch9w8j309j05rne"
+password = "cool"
 
 3.times do
- Shopper.create(name: shopper_names.sample, address: shopper_addreesses.sample)
+   Shopper.create(name: shopper_names.sample, address: shopper_addreesses.sample, email: email_addresses, city: city, state: state, zip: zip, card_number: card_number, expiration_month: month, expiration_year: year, cvv: cvv, password_digest: password_digest, password: password)
 end
 
-shopper_ids = [1, 2]
 
+shopper_ids = [1, 2]
 5.times do
  Order.create(shopper_id: shopper_ids.sample)
 end
@@ -41,6 +45,5 @@ product_ids = [1, 2, 3, 4, 5]
 5.times do
  ProductOrder.create(order_id: order_ids.sample, product_id: product_ids.sample)
 end
-
 
 puts "Successful Seeding!"

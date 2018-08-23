@@ -18,13 +18,23 @@
          <%= image_tag  "shopping-cart.png", class: "btn cart_button" %>
     <% end %>
 
-    <%= link_to root_path do %>
-          <%= image_tag  "user-account-box.png", class: "btn account_button" %>
+    <% if logged_in? %>
+      <%= link_to(logout_path, method: :delete) do %>
+        <%= image_tag  "user-account-box.png", class: "btn account_button" %>
+      <% end %>
+    <% else %>
+      <%= link_to login_path do %>
+        <%= image_tag  "user-account-box.png", class: "btn account_button" %>
+      <% end %>
     <% end %>
+
+    <%= yield %>
 
   </header>
 
   <body class="body">
-    <%= yield %>
+    <!-- <% if logged_in? %>
+      <%= button_to('Logout', logout_path, method: :delete) %>
+    <% end %> -->
   </body>
 </html>
