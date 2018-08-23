@@ -4,12 +4,16 @@
  <%= image_tag  "dairy.jpg", class: "your_cart" %>
  <%= image_tag  "fruits.jpg", class: "your_cart" %>
 
+
 <ul class="create_cart">
 
+counter = 0
   <% @products.map do |product| %>
       <li>
         <%= link_to product.name, product %>
 
+      <%= image_tag  pic_array[counter], class: "product_image " %>
+          counter += 1
         $<%= product.price %>
 
         <%= form_tag add_to_cart_path, method: "cart#update" do %>
@@ -25,9 +29,10 @@
   <% end %>
 </ul>
 
- <%= image_tag  "dairy/d1.jpg", class: "product_image " %>
- <%= image_tag  "dairy/dai_natyolk_natwhtlg_z.jpg", class: "product_image " %>
- <%= image_tag  "dairy/dai_pid_2002509_z.jpg", class: "product_image " %>
- <%= image_tag  "dairy/dai_orgval_sourcrm_z.jpg", class: "product_image " %>
- <%= image_tag  "dairy/dai_pid_2003188_z.jpg", class: "product_image " %>
+
  <%= image_tag  "dairy/dai_pid_2003301_z.jpg", class: "product_image " %>
+  <%= image_tag  "dairy/dai_natyolk_natwhtlg_z.jpg", class: "product_image " %>
+   <%= image_tag  "dairy/dai_pid_2003188_z.jpg", class: "product_image " %>
+   <%= image_tag  "dairy/dai_pid_2002509_z.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/d1.jpg", class: "product_image " %>
+ <%= image_tag  "dairy/dai_orgval_sourcrm_z.jpg", class: "product_image " %>
