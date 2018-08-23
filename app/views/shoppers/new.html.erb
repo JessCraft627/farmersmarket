@@ -1,11 +1,8 @@
-
-
-
 <div class="signup">
-
+  <%= image_tag  "sign-up.png", class: "signup" %>
 <%= form_for(@shopper) do |f| %>
   <% if flash[:notice] %>
-     <%= flash[:notice] %>
+      <div class = "alert"><%= flash[:notice] %></div>
    <% end %>
 
    <% if @shopper.errors.any? %>
@@ -18,8 +15,8 @@
      <%= f.label :email %>   <br>
      <%= f.email_field :email %>
      <br>
-     <%= f.label :password, placeholder: "Must be 5 characters long"  %>   <br>
-     <%= f.password_field :password %>
+     <%= f.label :password %>   <br>
+     <%= f.password_field :password, placeholder: "Must be 5 characters long"  %>
         <br>
      <%= f.label :password_confirmation, "Password Confirmation" %>   <br>
      <%= f.password_field :password_confirmation %>
@@ -45,7 +42,7 @@
       <%= f.number_field :card_number, placeholder: "1111-2222-3333-4444"  %>   <br>
 
       <%= f.label :expiration_month %><br>
-      <%= f.text_field :expiration_month, placeholder: "September"  %>   <br>
+      <%= f.text_field :expiration_month, placeholder: "January"  %>   <br>
 
       <%= f.label :expiration_year %><br>
       <%= f.number_field :expiration_year, placeholder: "2020"  %> <br>

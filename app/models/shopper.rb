@@ -7,7 +7,7 @@ class Shopper < ApplicationRecord
   validates :city,  presence: true, length: { maximum: 15 }
   validates :state,  presence: true, length: { maximum: 2}
   validates :zip,  presence: true, length: { is: 5 }
-  validates :card_number,  presence: true, length: { is: 16 }
+  validates :card_number,  presence: true, length: { maximum: 19}
   validates :expiration_month,  presence: true, length: { maximum: 10 }
   validates :expiration_year,  presence: true, length: { is: 4 }
   validates :cvv,  presence: true, length: { is: 3 }
@@ -18,7 +18,7 @@ class Shopper < ApplicationRecord
                     uniqueness: { case_sensitive: false }
 
   has_secure_password
-  
+
   validates :password, presence: true, length: { minimum: 5 }
 
 

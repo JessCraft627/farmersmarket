@@ -4,7 +4,7 @@
 
 
 .success {
-  width: 1027px;
+  width: 80%;
   height: 572px;
   border-radius: 10px;
   background-color: #93bfae;
@@ -15,7 +15,7 @@
 .thank_you_title {
   padding-left: 120px;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 95px;
   width: 70%;
 }
 
@@ -26,17 +26,14 @@
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #ffffff;
+    margin: 0 auto;
+    padding-top:  20px;
+    color: #ffffff;
+    width: 70%;
 
 }
 
 .order_received {
-   font-size: 22px;
+   font-size: 20px;
    font-weight: thin;
-}
-
-.home_address {
-  font-weight: bold;
-   font-size: 16px;
-
 }
