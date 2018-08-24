@@ -26,6 +26,17 @@ class ProductsController < ApplicationController
     "dairy/dai_pid_2003188_z.jpg", "dairy/dai_pid_2002509_z.jpg","dairy/d1.jpg",
     "dairy/dai_orgval_sourcrm_z.jpg"]
 
+    meat = ["meat/chicken.jpg", "meat/duck.jpg", "meat/turkey.jpg", "meat/beef.jpg",
+    "meat/lamb.jpg", "meat/pork3.jpg"]
+
+    fruit = ["fruits/cherry.jpg",   "fruits/grapes.jpg",
+    "fruits/banana.jpg", "fruits/watermelon.jpg","fruits/apple.jpg",
+    "fruits/pear.jpg"]
+
+    vegetable = ["veg/carrot.jpg",   "veg/broccoli.jpg",
+    "veg/garlic.jpg", "veg/pepper.jpg","veg/potato.jpg",
+    "veg/tomator.jpg"]
+
     @pics_array = []
     icon_array = ["vegetables.jpg", "meats.jpg", "dairy.jpg", "fruits.jpg"]
     @food_type = params[:food_type]
@@ -36,10 +47,15 @@ class ProductsController < ApplicationController
 
     elsif @food_type == "meat"
        @icon = icon_array[1]
+       @pics_array = meat
+
      elsif @food_type == "vegetable"
        @icon =  icon_array[0]
+      @pics_array = vegetable
+
     else
       @icon =  icon_array[3]
+      @pics_array = fruit
   end
 
 end

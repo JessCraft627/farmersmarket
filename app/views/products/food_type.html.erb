@@ -1,24 +1,24 @@
 <h3 class= "alert"><%= flash[:notice] %></h3>
 
-<%=  image_tag @icon, class: "your_cart" %>
+<p class="centered"><%=  image_tag @icon, class: "icon_photo" %> </p>
 
-<ul class="create_cart">
+<ul class="create_cart_page">
 
    <% counter = 0 %>
   <% @products.each do |product| %>
-      <li>
+      <li class="single_product">
         <%= link_to product.name, product %>
+         <br>
         <% url = @pics_array[counter] %>
-        <%= image_tag  "#{url}"%>
-        $<%= product.price %>
-
-        <%= form_tag add_to_cart_path, method: "cart#update" do %>
-          <%= number_field_tag :quantity %>
+        <%= image_tag  "#{url}", class: "product_image"%><br>
+        <div class="display_inline">$<%= product.price %></div> <%= form_tag add_to_cart_path, method: "cart#update" do %>
+          x<%= number_field_tag :quantity %><br>
           <%=
             button_to "Add To Cart",
             add_to_cart_path,
             method: :patch,
-            params: { product_id: product.id, name: product.name }
+            params: { product_id: product.id, name: product.name },
+            class: "add_to_cart"
           %>
         <% end %>
       </li>

@@ -1,15 +1,16 @@
+<div class="login_form">
+   <%= image_tag  "log-in.png", class: "signup" %>
 
-<h1>Login</h1>
+  <h3><%= flash[:notice] %></h3>
 
-<h3><%= flash[:notice] %></h3>
+  <%= form_tag login_path, method: :post do %>
+  <li class="bolder">  <%= label_tag "Name" %> </li>
+    <%= text_field_tag :name %><br>
+  <li class="bolder">   <%= label_tag "Password" %></li>
+    <%= text_field_tag :password %><br>
+    <%= submit_tag "Log in" , class: "create_btn" %>
+  <% end %>
 
-<%= form_tag login_path, method: :post do %>
-  <%= label_tag "Shopper Name" %>
-  <%= text_field_tag :name %>
-  <%= label_tag "Password" %>
-  <%= text_field_tag :password %>
-  <%= submit_tag "Login" %>
-<% end %>
-
-<p> Don’t have an account?
-<%= link_to("Sign Up", new_shopper_path) %> </p>
+  <div style="padding-top:15px;"> Don’t have an account?
+  <%= link_to("Sign Up", new_shopper_path) %> </div>
+</div>

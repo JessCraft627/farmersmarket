@@ -4,10 +4,13 @@
 body {
   margin: 0;
 }
+
 .nav_bar {
     margin-bottom: 15px
 }
-
+.login_form {
+  text-align: center;
+}
 .title {
     color: white;
     padding-top: 300px;
@@ -22,16 +25,28 @@ body {
   text-align: center;
   font-size: 30px;
 }
+
 .main_photo {
   width: 300px;
-  margin-left: 15px;
+  margin-bottom: 45px;
+  padding: 45px;
 }
 
 .your_cart {
-    width: 200px;
+    margin-left: 15px;
 }
+.centered {
+  margin: 0 auto;
+  text-align: center;
+  }
+
+.icon_photo {
+    width: 300px;
+}
+
 .product_image {
-  width: 90px;
+  width: 140px;
+  padding: 15px;
 }
 
 .header {
@@ -45,12 +60,14 @@ body {
   margin-bottom: 10px;
 }
 
-ul {
+ul, ol, li {
   list-style: none;
 }
  .directory {
      padding: 10px;
-     margin-bottom:  100px;
+     text-align: center;
+      margin-top:  20px;
+     margin-bottom:  20px;
  }
 .btn {
   padding-top: 20px ;
@@ -76,11 +93,6 @@ ul {
 .create_cart {
   text-align: center;
 }
-
-.your_cart {
-  text-align: center;
-  font-size: 30px;
-  }
 
  .checkout_text {
    text-align: center;
@@ -124,7 +136,7 @@ ul {
 }
 
 .confirm_button {
-  width: 30%;
+  width: 55%;
   height: 54px;
   margin:  60px auto 40px;
   border-radius: 10px;
@@ -137,10 +149,71 @@ ul {
 .alert {
   color: white;
   font-size:  22px;
-  margin: 15px;
   background-color: #93bfae;
   width: 500px;
   border-radius:  2px;
-  margin: 0 auto;
+  margin: 15px auto;
   text-align: center;
 }
+
+.checkout_form {
+  width: 45%;
+  float: left;
+  padding-left: 140px;
+}
+
+.your_cart_form {
+  float: left;
+  width: 40%;
+
+}
+
+.list_for_checkout li {
+  padding-bottom: 7px;
+}
+
+.form_titles {
+width: 300px;
+border-bottom: 2px solid #93bfae;
+height: 34px;
+font-family: Montserrat;
+font-size: 28px;
+font-weight: bold;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+color: #463225;
+}
+
+.border_bottom {
+  padding:15px 0px 5px 0px;
+  width: 170px;
+  border-bottom: 1px solid #93bfae;
+}
+
+.bold {
+  display: inline;
+  padding-right: 30px;
+  font-weight: bold;
+}
+
+.bolder {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.space {
+  display: inline;
+  padding-right: 30px;
+}
+
+a {
+  color:  black;
+  font-weight: bold;
+  text-decoration: none;
+ }
+
+ .display_inline {
+   display: inline;
+ }
