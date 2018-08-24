@@ -3,14 +3,20 @@ class CartController < ApplicationController
   before_action :get_total_price, only: :show
 
   def update
-
-    params[:quantity].to_i.times do
-      add_product_to_cart(params[:product_id])
+    if params[:quantity].length == 0
+      1.times do
+        add_product_to_cart(params[:product_id])
+        flash[:notice] = "Successfully added 1 order of #{params[:name]} to your cart"
+      end
+    else
+      params[:quantity].to_i.times do
+        add_product_to_cart(params[:product_id])
+        flash[:notice] = "Successfully added #{params[:quantity]} orders of #{params[:name].pluralize} to your cart"
+      end
     end
-
     # byebug
 
-    flash[:notice] = "Successfully added #{params[:name]} to cart"
+
     # redirect_to products_path #redirects to refresh cart
     food_type = Product.find(params[:product_id])[:food_type]
     redirect_to food_type_path(food_type) #redirects to refresh cart
@@ -21,9 +27,16 @@ class CartController < ApplicationController
   end
 
   def clear_cart
+    byebug
     session[:cart] = []
     redirect_to show_cart_path
   end
+
+  # def delete_item
+  #   byebug
+  #   session[:cart] = []
+  #   redirect_to show_cart_path
+  # end
 
   def confirmation
     session[:cart] = []

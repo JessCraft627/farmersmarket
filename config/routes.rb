@@ -13,15 +13,11 @@ Rails.application.routes.draw do
 
   #Customize Edit
   get '/profile', to: 'shoppers#profile', as: 'profile'
-  get '/profile/edit', to: 'shopper#edit', as: 'edit_profile'
+  get '/profile/edit', to: 'shoppers#edit', as: 'edit_profile'
 
   #Customize login & logout
   get '/login', to: 'sessions#new', as: 'login'
-  # get '/public/login', to: 'sessions#new', as: 'login'
-  # get '/login/public', to: 'sessions#public', as: 'public' #just added
-  # get '/public', to: 'sessions#public', as: 'public' #just added
   post '/login', to: 'sessions#create'
-  # post 'public/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
 
 end

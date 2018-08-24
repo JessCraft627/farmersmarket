@@ -3,7 +3,11 @@
 <h3><%= flash[:notice] %></h3>
 <ol>
   <% @cart_products.each do |cart_product| %>
-    <li><%= cart_product.name %> Price: $<%= cart_product.price %> Quantity: <%= @quantities.count(cart_product.id.to_s) %></li>
+    <li>
+      <%= cart_product.name %>
+      Price: $<%= cart_product.price %>
+      Quantity: <%= @quantities.count(cart_product.id.to_s) %>
+    </li>
   <% end %>
   <br>
 

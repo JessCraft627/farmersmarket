@@ -28,7 +28,7 @@ month = "September"
 year = "2020"
 cvv = 694
 password_digest = "dnf3kjb4rgfehch9w8j309j05rne"
-password = "cool"
+password = "reallycool"
 
 3.times do
    Shopper.create(name: shopper_names.sample, address: shopper_addreesses.sample, email: email_addresses, city: city, state: state, zip: zip, card_number: card_number, expiration_month: month, expiration_year: year, cvv: cvv, password_digest: password_digest, password: password)

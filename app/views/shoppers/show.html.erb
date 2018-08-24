@@ -19,7 +19,8 @@
   <li>Card Expiration Year: <%= @shopper.expiration_year %></li>
   <li>Card CVV: <%= @shopper.cvv %></li>
   <br>
-  <%= button_to "Edit Account Info", shopper_path(@shopper), method: :get, class: "edit_account_button" %>
+
+  <%= button_to "Edit Account Info", edit_profile_path, method: :get, class: "edit_account_button" %>
 </ul>
 
 

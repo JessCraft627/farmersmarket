@@ -28,6 +28,7 @@ class ShoppersController < ApplicationController
   end
 
   def edit
+    byebug
     render :edit
   end
 
