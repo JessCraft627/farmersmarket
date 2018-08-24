@@ -1,7 +1,7 @@
-fruits = ["cherries", "grapes", "bananas", "watermelon", "granny smith apples", "bartlett pear"]
-vegetables = ["carrots", "broccoli", "garlic", "pepper", "potato", "tomato"]
-meats = ["chicken", "duck", "turkey", "beef", "lamb", "pork"]
-dairies = ["milk", "egg", "cheese", "butter", "yogurt", "sour cream"]
+fruits = ["Cherries", "Grapes", "Banana", "Watermelon", "Granny Smith Apple", "Bartlett Pear"]
+vegetables = ["Carrot", "Broccoli", "Garlic", "Pepper", "Potato", "Tomato"]
+meats = ["Chicken", "Duck", "Turkey", "Beef", "Lamb", "Pork"]
+dairies = ["Milk", "Eggs", "Cheese", "Butter", "Yogurt", "Sour Cream"]
 
 fruit_prices = [8, 5, 2, 5, 6, 1]
 vegetable_prices = [3, 4, 4, 4, 2, 4]

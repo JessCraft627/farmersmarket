@@ -117,6 +117,9 @@ ul, ol, li {
   font-size: 16px;
 }
 
+.total_cost {
+  margin-bottom: -25px;
+}
 .clear_button {
   width: 120px;
   height: 34px;
@@ -124,6 +127,7 @@ ul, ol, li {
   background-color: #93bfae;
   color: #ffffff;
   font-size: 12px;
+  margin: 10px;
 }
 
 .edit_account_button {
@@ -156,6 +160,16 @@ ul, ol, li {
   text-align: center;
 }
 
+.alerts {
+  color: white;
+  font-size:  16px;
+  background-color: #93bfae;
+  width: 500px;
+  border-radius:  2px;
+  margin:5px auto;
+  text-align: center;
+}
+
 .checkout_form {
   width: 45%;
   float: left;
@@ -165,7 +179,6 @@ ul, ol, li {
 .your_cart_form {
   float: left;
   width: 40%;
-
 }
 
 .list_for_checkout li {
@@ -176,25 +189,38 @@ ul, ol, li {
 width: 300px;
 border-bottom: 2px solid #93bfae;
 height: 34px;
-font-family: Montserrat;
 font-size: 28px;
 font-weight: bold;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
 color: #463225;
+}
+
+.form_title {
+  margin: 30px auto;
+  width: 300px;
+  border-bottom: 2px solid #93bfae;
+  height: 34px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #463225;
+  text-align: center;
 }
 
 .border_bottom {
   padding:15px 0px 5px 0px;
-  width: 170px;
+  width: 250px;
   border-bottom: 1px solid #93bfae;
+}
+
+.border_bottoms {
+  padding:15px 0px 5px 0px;
+  width: 550px;
+    margin: 0 auto;
+  border-bottom: 3px solid #93bfae;
 }
 
 .bold {
   display: inline;
-  padding-right: 30px;
+  padding-right: 50px;
   font-weight: bold;
 }
 
@@ -205,7 +231,11 @@ color: #463225;
 
 .space {
   display: inline;
-  padding-right: 30px;
+  padding-right: 40px;
+}
+.spaces {
+  display: inline;
+  padding-right: 60px;
 }
 
 a {

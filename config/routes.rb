@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :orders, only: [:show, :new, :create, :edit, :update]
-  resources :shoppers, only: [:show, :new, :create, :update]
+  resources :shoppers, only: [:show, :new, :create, :update, :edit]
   get '/cart/main', to: 'cart#main'
   root to: "products#main"
   get '/cart/confirmation', to: 'cart#confirmation'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   #Customize Edit
   get '/profile', to: 'shoppers#profile', as: 'profile'
-  get '/profile/edit', to: 'shopper#edit', as: 'edit_profile'
+  get '/profile/edit', to: 'shoppers#edit', as: 'edit_profile'
 
   #Customize login & logout
   get '/login', to: 'sessions#new', as: 'login'

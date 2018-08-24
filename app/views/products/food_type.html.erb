@@ -11,8 +11,8 @@
          <br>
         <% url = @pics_array[counter] %>
         <%= image_tag  "#{url}", class: "product_image"%><br>
-        <div class="display_inline">$<%= product.price %></div> <%= form_tag add_to_cart_path, method: "cart#update" do %>
-          x<%= number_field_tag :quantity %><br>
+      $<%= product.price %> <%= form_tag add_to_cart_path, method: "cart#update",  class: "display_inline" do %>
+        x<%= number_field_tag :quantity %><br>
           <%=
             button_to "Add To Cart",
             add_to_cart_path,

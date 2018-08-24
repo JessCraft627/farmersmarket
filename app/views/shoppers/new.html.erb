@@ -2,28 +2,28 @@
   <%= image_tag  "sign-up.png", class: "signup" %>
 <%= form_for(@shopper) do |f| %>
   <% if flash[:notice] %>
-      <div class = "alert"><%= flash[:notice] %></div>
+      <%= flash[:notice] %>
    <% end %>
-
    <% if @shopper.errors.any? %>
  <% @shopper.errors.full_messages.each do |msg|%>
- <br>
- <%= msg %>
+<div class="alerts"> <%= msg %> </div>
  <%end %>
  <%end  %>
-  <p>Account</p>
+  <p class="form_title"> Account</p>
      <%= f.label :email %>   <br>
-     <%= f.email_field :email %>
-     <br>
+     <%= f.email_field :email %><br>
+
      <%= f.label :password %>   <br>
      <%= f.password_field :password, placeholder: "Must be 5 characters long"  %>
         <br>
+
      <%= f.label :password_confirmation, "Password Confirmation" %>   <br>
      <%= f.password_field :password_confirmation %>
 
-  <p>Billing Address</p>
+  <p class="form_title">Billing Address</p>
     <%= f.label :address %><br>
     <%= f.text_field :address %>
+
          <br>
     <%= f.label :city %><br>
     <%= f.text_field :city %>   <br>
@@ -34,7 +34,7 @@
     <%= f.label :zip %><br>
     <%= f.number_field :zip %><br>
 
-      <p>Payment Information</p>
+        <p class="form_title"> Payment Information</p>
       <%= f.label :name %><br>
       <%= f.text_field :name %>   <br>
 
@@ -45,11 +45,10 @@
       <%= f.text_field :expiration_month, placeholder: "January"  %>   <br>
 
       <%= f.label :expiration_year %><br>
-      <%= f.number_field :expiration_year, placeholder: "2020"  %> <br>
+        <%= f.number_field :expiration_year, placeholder: "2020"  %> <br>
 
       <%= f.label :cvv %><br>
       <%= f.number_field :cvv, placeholder: "909"  %>
-       <br>
        <br>
      <%= f.submit "Create my account", class: "create_btn" %>
 

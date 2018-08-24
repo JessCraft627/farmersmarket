@@ -1,7 +1,7 @@
 <div class="login_form">
    <%= image_tag  "log-in.png", class: "signup" %>
 
-  <h3><%= flash[:notice] %></h3>
+  <div class = "alert"><%= flash[:notice] %></div>
 
   <%= form_tag login_path, method: :post do %>
   <li class="bolder">  <%= label_tag "Name" %> </li>
