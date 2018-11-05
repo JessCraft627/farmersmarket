@@ -2,7 +2,7 @@
 Local grocer carrying specialty meats, dairy, fruits and vegetables.
 
 ## Motivation:
-As a foodie myself, I wanted to create a project for foodies. This project exists to provide a unique shopping experience for consumers that want fresh, local product. 
+As a foodie myself, I wanted to create a project for foodies. This project exists to provide a unique shopping experience for consumers that want fresh, local products. 
 
 ## Screenshots:
 <img width="1440" alt="screen shot 2018-10-31 at 11 35 " src="https://user-images.githubusercontent.com/35347408/47800074-f16da280-dd01-11e8-80f4-9f7797b0d1f8.png">
