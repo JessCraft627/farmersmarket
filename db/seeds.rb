@@ -40,10 +40,6 @@ shopper_ids = [1, 2]
  Order.create(shopper_id: shopper_ids.sample)
 end
 
-order_ids = [1, 2, 3, 4, 5]
-product_ids = [1, 2, 3, 4, 5]
-5.times do
- ProductOrder.create(order_id: order_ids.sample, product_id: product_ids.sample)
-end
+
 
 puts "Successful Seeding!"
