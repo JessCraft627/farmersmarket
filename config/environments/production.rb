@@ -1,6 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.serve_static_assets = true
+  config.assets.compile = true
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -75,9 +77,7 @@ Rails.application.configure do
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
-  
-  config.serve_static_assets = true
-  config.assets.compile = true
+
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
