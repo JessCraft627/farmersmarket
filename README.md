@@ -16,15 +16,19 @@ Javascript
 
 
 ## Installation:
-To get a development server running clone the project, bundle install and run rails s from the command line.  
+1. Clone down this repo and run bundle install.
+2. Once this has completed and all dependencies are installed, run rails s.
+3. Visit http://localhost:3000/.
 
-
-## How to use?
-1. Bundle Install
-2. Rails s
 
 ## Contribute
+Thanks for your interest in contributing to Farm To Table!
 If you have ideas/contributions or see a bug that needs fixed please submit a pull request.
+
+## Pull requests
+Pull Requests are welcome. Ensure that you've run bundle install before creating an issue or submitting a pull request. Please ensure the pull request description clearly describes the problem and solution. It should include:
+The operating system on which you tested.
+The relevant issue number, if applicable.
 
 ## Credits:
 Jessica Long & Yung Leung
