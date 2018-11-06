@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 .title {
-    color: white;
+    color: black;
     padding-top: 300px;
     margin: 0 auto;
     padding-left: 20%;
@@ -49,16 +49,16 @@ body {
   padding: 15px;
 }
 
-.header {
-  background-image: url('./r.jpg');
-  height: 750px;
-  margin: 0 auto;
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-position: center;
-  background-color: white;
-  margin-bottom: 10px;
-}
+// .header {
+//   background-image: url('./r.jpg');
+//   height: 750px;
+//   margin: 0 auto;
+//   background-size: cover;
+//   background-repeat:no-repeat;
+//   background-position: center;
+//   background-color: white;
+//   margin-bottom: 10px;
+// }
 
 ul, ol, li {
   list-style: none;
