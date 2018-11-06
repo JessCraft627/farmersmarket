@@ -77,9 +77,9 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-# <%= ENV['BACKEND_DATABASE_PASSWORD'] %>
+#
 production:
   <<: *default
   database: de6er4eabt4ujd
   username: culmqkzwknntau
-  password: 8c27e505b3bc70e5ea032af9b8b1b4ce86c0c5605663042ad0f01f785d95d218
+  password:  <%= ENV['BACKEND_DATABASE_PASSWORD'] %>
